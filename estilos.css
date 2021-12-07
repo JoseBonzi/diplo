@@ -98,16 +98,13 @@ header {
 }
 
 #fotosdeinicio {
-    background-color: #ff5050;
-    height: 35%;
-    margin-bottom: 3%;
+    height: 650px;
 }
 
 
 #imagenes {
     width: 860px;
-    height: 400px;
-    background-color: #ff1a1a;
+    height: 500px;
     float: left;
     margin-top: 50px;
     margin-left: 50px;
@@ -391,17 +388,15 @@ footer {
         height: 500px;
     }
        
-    #nosotros {
-        width: 580px; 
-    }
-    
-    #nosotros h2 {
+
+    #nosotros h2 a {
         width: 580px;
     }
+
+    .text-us {
+        width: 580px;
+        
     
-    #us p {
-        font-size: 20px;
-        margin-top: 30px;
     }
     
     #artistas {
@@ -441,10 +436,6 @@ footer {
         width: 580px;  
     }
     
-    #legal {
-        width: 100px; 
-    }
-    
     #creador {
         width: 100px;
     }
@@ -469,12 +460,15 @@ footer {
         float: none;
     }
     
-    #raftel h1, #nosotros, #nosotros h2, #artistas  {
+    #raftel h1, #nosotros, #nosotros h2 a, #col_contact1  {
         width: 100%;
         
  
     }
-    
+    .text-us {
+        width: 100%;
+    }
+
     #btn-header {
         width: 100%;
         float: none;
@@ -522,7 +516,12 @@ footer {
 } /*Fin de @media -599px */  
 
 @media all and (max-width:300px) {
+    #img-lugar {
+        display: none;
+    }
+    
     #img-comida {
         display: none;
     }
+
 }
