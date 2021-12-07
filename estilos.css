@@ -180,7 +180,7 @@ header {
 #col_contact1 h2 {
     color: #660000;
     text-align: center; 
-    width: 960px;
+    /* width: 960px; */
     height: 50px;
     line-height: 45px;
     font-family: 'Raleway', sans-serif;

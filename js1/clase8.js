@@ -1,6 +1,8 @@
 let oculto = true; // var global para saber si está oculto o no
 function hideDiv() {
-    if($(window).width() > 500) { 
+    const windowWidth = window.screen.width;
+    const windowInnerWidth = window.innerWidth;
+    if(windowWidth >= 1024 || windowInnerWidth >= 1024) {
         var textDiv = document.getElementById('txtus') // obtenemos el div que contiene el <p>
         var textSection = document.getElementById('us') // obtenemos la <section> que engloba al <div> y al <p>
         var text = document.getElementsByClassName('text-us')[0]  // obtenemos el elemento <p> directamente, que contiene el texto.
@@ -14,13 +16,30 @@ function hideDiv() {
             oculto = true // se setea la variable global a que está OCULTO.
         } else { 
             textSection.classList.add('showed-div') // se le agrega la clase 'showed-div' a la <section>, la cual tiene un height = 300px con un transalation de animación.
-          if(textSection.classList.contains('hidden-div')){ // si la se <section> ya tiene la clase 'hidden-div', se la elimina para que no genere bugs.
-            textSection.classList.remove('hidden-div') // se elimina
-        }
+            if(textSection.classList.contains('hidden-div')){ // si la se <section> ya tiene la clase 'hidden-div', se la elimina para que no genere bugs.
+                textSection.classList.remove('hidden-div') // se elimina
+            }
             text.style.color = 'black' // se le agrega style de color = balck al texto.
             text.style.transition = 'color 6s ease' // se le agrega una transición de cambio de color de 6 segundos (así aparece), con animación ease.
             oculto = false // se setea la variable global a que esta OCULTO.
         }
     }
-
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const windowWidth = window.screen.width;
+    const windowInnerWidth = window.innerWidth;
+    if(windowWidth < 1024 || windowInnerWidth < 1024){
+            var textDiv = document.getElementById('txtus') // obtenemos el div que contiene el <p>
+            var textSection = document.getElementById('us') // obtenemos la <section> que engloba al <div> y al <p>
+            var text = document.getElementsByClassName('text-us')[0]  // obtenemos el elemento <p> directamente, que contiene el texto.
+            textSection.classList.add('showed-div') // se le agrega la clase 'showed-div' a la <section>, la cual tiene un height = 300px con un transalation de animación.
+            if(textSection.classList.contains('hidden-div')){ // si la se <section> ya tiene la clase 'hidden-div', se la elimina para que no genere bugs.
+                textSection.classList.remove('hidden-div') // se elimina
+            }
+            text.style.color = 'black' // se le agrega style de color = balck al texto.
+            text.style.transition = 'color 6s ease' // se le agrega una transición de cambio de color de 6 segundos (así aparece), con animación ease.
+    } else{
+            
+    }
+});
