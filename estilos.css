@@ -21,6 +21,7 @@ header, section, footer {
 }
 
 header {
+    z-index: 10000;
     background-image: url(imagenes/white-waves.png);
     height: 60px;
     position: sticky;
@@ -98,9 +99,10 @@ header {
 
 #fotosdeinicio {
     background-color: #ff5050;
-    height: 500px;
-
+    height: 35%;
+    margin-bottom: 3%;
 }
+
 
 #imagenes {
     width: 860px;
@@ -378,8 +380,8 @@ footer {
     }
 
     #fotosdeinicio { 
-        width: 580px;
-        padding: 40px;
+        width: 70%;
+        padding: 2em;
     }
     
    #imagenes {
